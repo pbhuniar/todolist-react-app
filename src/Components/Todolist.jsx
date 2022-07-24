@@ -9,8 +9,7 @@ const Todolist = ({ todo, deletefromTodo, edit, handleClose, handleShow, setedit
   
   <div className='outerblock'>
 {
-        todo.slice(0)
-        .reverse()
+        todo
         .map((value, key) => (
           <>
           {console.log(Math.floor(Math.random() *key))}

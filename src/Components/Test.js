@@ -51,13 +51,16 @@ const Test = () => {
 
   }
   const saveData = () => {
-    let inventory = todo
-    inventory.forEach((x, index) => {
-      if (x.id == editindex) {
-        inventory[index] = { ...x, detail: edittext, updatetime: todo[editindex]?.updatetime + 1 }
-      }
-    })
-
+    if(edittext!==""){
+      let inventory = todo
+      inventory.forEach((x, index) => {
+        if (x.id == editindex) {
+          inventory[index] = { ...x, detail: edittext, updatetime: todo[editindex]?.updatetime + 1 }
+        }
+      })
+  
+    }
+   
   }
 
 console.log(todo)
@@ -87,7 +90,7 @@ console.log(todo)
         <Modal.Body style={{background:"rgb(210, 179, 239)"}}>
 
          
-          <textarea id="w3review" name="w3review" rows="4" cols="50"onChange={(e) => updateText(e)}>
+          <textarea id="w3review" name="w3review" rows="4" style={{width:"auto"}} cols="50"onChange={(e) => updateText(e)}>
           {todo[editindex]?.detail}
 </textarea>
         </Modal.Body>
