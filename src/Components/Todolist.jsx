@@ -27,7 +27,7 @@ const Todolist = ({ todo, deletefromTodo, edit, handleClose, handleShow, setedit
                 <p><i>{"("}update {value?.updatetime} time {")"}</i></p>
                 </div>
              
-              <i style={{margin:"5px",color:"red"}} onClick={() => deletefromTodo(key)} class="fa-solid fa-circle-minus"></i>
+              <i style={{margin:"5px",color:"#b30e0e"}} onClick={() => deletefromTodo(key)} class="fa-solid fa-circle-minus"></i>
               
               <i style={{margin:"5px",color:"#054001"}}  onClick={() => { handleShow(); seteditindex(key) }} class="fa-solid fa-pen-to-square"></i>
             </div>
