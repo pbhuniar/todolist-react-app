@@ -4,10 +4,14 @@ import './style.css'
 const Todolist = ({ todo, deletefromTodo, edit, handleClose, handleShow, seteditindex }) => {
   return (
     <div >
-
-
-      {
-        todo?.map((value, key) => (
+{
+  todo?.length>0?<>
+  
+  <div className='outerblock'>
+{
+        todo.slice(0)
+        .reverse()
+        .map((value, key) => (
           <>
           {console.log(Math.floor(Math.random() *key))}
           <div className='list-style'>
@@ -20,7 +24,7 @@ const Todolist = ({ todo, deletefromTodo, edit, handleClose, handleShow, setedit
                   textOverflow: "ellipsis",
                   padding:"2px" 
                
-              }}   >{value?.todoname}</h6>
+              }}   > {value?.todoname}</h6>
                 <p><i>{"("}update {value?.updatetime} time {")"}</i></p>
                 </div>
              
@@ -36,6 +40,21 @@ const Todolist = ({ todo, deletefromTodo, edit, handleClose, handleShow, setedit
           </>
         ))
       }
+</div>
+  
+  
+  </>:<>
+
+
+
+  <div className='outerblock'>
+        <h5 style={{textAlign:"center",marginTop:"25%"}}>Add todo data</h5>
+</div>
+  </>
+}
+
+
+     
 
     </div>
   )

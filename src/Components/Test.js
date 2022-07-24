@@ -80,16 +80,18 @@ console.log(todo)
 
 
 
-      <Modal show={edit} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Add {todo[editindex]?.todoname}'s detail </Modal.Title>
+      <Modal show={edit} onHide={handleClose} >
+        <Modal.Header closeButton style={{background:"#9f4894"}}>
+          <Modal.Title style={{color:"rgb(177, 222 ,239"}}>{todo[editindex]?.detail==""?"Add":"Update"} {todo[editindex]?.todoname}'s detail </Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body style={{background:"rgb(210, 179, 239)"}}>
 
-          <input  defaultValue={todo[editindex]?.detail} onChange={(e) => updateText(e)} />
-
+         
+          <textarea id="w3review" name="w3review" rows="4" cols="50"onChange={(e) => updateText(e)}>
+          {todo[editindex]?.detail}
+</textarea>
         </Modal.Body>
-        <Modal.Footer>
+        <Modal.Footer style={{background:"#9f4894"}}>
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
