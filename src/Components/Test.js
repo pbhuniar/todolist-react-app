@@ -12,7 +12,6 @@ const Test = () => {
   let [editindex, seteditindex] = useState()
   let [edittext, setedittext] = useState("")
 
-
   const handleClose = () => setEdit(false);
   const handleShow = (val) => setEdit(true);
   let [text, setText] = useState("")
@@ -43,14 +42,13 @@ const Test = () => {
   }
 
 
-
-
   const updateText = (e) => {
     setedittext(e?.target?.value)
 
 
   }
   const saveData = () => {
+ 
     if(edittext!==""){
       let inventory = todo
       inventory.forEach((x, index) => {
@@ -58,12 +56,12 @@ const Test = () => {
           inventory[index] = { ...x, detail: edittext, updatetime: todo[editindex]?.updatetime + 1 }
         }
       })
-  
+      setedittext("")
     }
    
   }
+console.log(edittext)
 
-console.log(todo)
   return (
     <div>
       <div style={{textAlign:"center"}}>
@@ -72,17 +70,9 @@ console.log(todo)
       <input id="inputtext"  value={text} onChange={(e) => addTodo(e)} placeholder="Add a todo" />
       <button style={{width:"auto"}} className="Add-button" onClick={addData}>Add Todo</button>
       </div>
-  
       </div>
-      
       <br/>
       <Todolist todo={todo} deletefromTodo={deletefromTodo} edit={edit} handleClose={handleClose} handleShow={handleShow} seteditindex={seteditindex} />
-    
-      
-
-
-
-
       <Modal show={edit} onHide={handleClose} >
         <Modal.Header closeButton style={{background:"#9f4894"}}>
           <Modal.Title style={{color:"rgb(177, 222 ,239"}}>{todo[editindex]?.detail==""?"Add":"Update"} {todo[editindex]?.todoname}'s detail </Modal.Title>
