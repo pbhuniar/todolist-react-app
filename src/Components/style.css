@@ -1,0 +1,48 @@
+.list-style{
+    width: 39%;
+    margin: auto;
+    border:1px solid white;
+    padding:10px;
+    color:white;
+    background-color: rgb(164, 86, 236);
+    border-radius: 5px;
+}
+#inputtext{
+    width: 30% !important;
+    height: 40px;
+    padding: 5px;
+    text-align: center; 
+    border-radius: 4px;
+}
+#inputtext::placeholder{
+    text-align: center;
+    font-size: 15px;
+}
+
+#inputtext:focus{
+    outline: none;
+}
+
+.Add-button{
+    color:white;
+    border: none;
+    background-color: rgb(22, 92, 22);
+    height: 36px;
+    margin: 2px 0px 2px 0px;
+    border-radius: 4px;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .list-style {
+      width: 80%;
+    }
+
+    #inputtext {
+        width: 58% !important;
+      
+    }
+
+
+  }
