@@ -95,7 +95,7 @@ console.log(todo)
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={() => { handleClose(); saveData() }}>
+          <Button style={{background:"rgb(116 ,43, 183",border:"1px solid white"}} onClick={() => { handleClose(); saveData() }}>
             Save Changes
           </Button>
         </Modal.Footer>
