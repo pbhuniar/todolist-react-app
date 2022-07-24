@@ -4,9 +4,18 @@
     border:1px solid white;
     padding:10px;
     color:white;
-    background-color: rgb(164, 86, 236);
+    background-color: rgb(75, 148, 245);
     border-radius: 5px;
 
+}
+.list-style2{
+    width: 97%;
+    margin: 3px 10px 3px 10px;
+    border:1px solid white;
+    padding:10px;
+    color:white;
+    background-color:#964ee9;
+    border-radius: 5px;
 }
 
 .outerblock{

@@ -14,9 +14,9 @@ const Todolist = ({ todo, deletefromTodo, edit, handleClose, handleShow, setedit
         .map((value, key) => (
           <>
           {console.log(Math.floor(Math.random() *key))}
-          <div className='list-style'>
+          <div className={(key%2)==0?'list-style':"list-style2"}  >
           <div key={key} style={{display:"flex",justifyContent:"center"}}>
-              <div style={{display:"flex"}}>
+              <div style={{display:"flex"}}  onClick={() => { handleShow(); seteditindex(key) }}>
                 <h6  style={{
                   whiteSpace: "nowrap",
                   width: "120px", 
